@@ -1,0 +1,6 @@
+LD_PRELOAD/DYLD_INSERT_LIBRARIES hooking for postgresql to add a large delay to WAL synching
+
+obviously don't use this with database that you are about because it will destroy the data
+
+    pg_ctl init -D pg_data
+    DYLD_INSERT_LIBRARIES=./target/debug/libwal_delayer.dylib postgres -D pg_data -c port=5433

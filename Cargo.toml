@@ -1,0 +1,13 @@
+[package]
+name = "wal_delayer"
+version = "0.1.0"
+authors = ["Ben Murphy <benmmurphy@gmail.com>"]
+
+[lib]
+name = "wal_delayer"
+crate_type = ["dylib"]
+
+[dependencies]
+redhook="0.1.1"
+libc="0.2"
+lazy_static="1.0"
